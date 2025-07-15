@@ -3,7 +3,7 @@ import { Card, CardContent } from '../ui/card'
 import './stars.css'
 
 const About = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const starsRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -39,7 +39,7 @@ const About = () => {
   }, []);
   
   return (
-    <section ref={sectionRef} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
+    <div ref={sectionRef} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
       backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
       backgroundColor: "#0a0339"
     }}>
@@ -92,7 +92,7 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

@@ -39,8 +39,9 @@ function MainPage() {
           const isInView = rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
           
           if (isInView) {
-            const newPath = sectionId === 'hero' ? '/' : `/${sectionId}`;
-            if (window.location.pathname + window.location.hash !== newPath) {
+            const newPath = sectionId === 'hero' ? '/' : `/#${sectionId}`;
+            const currentPath = window.location.pathname + window.location.hash;
+            if (currentPath !== newPath) {
               window.history.replaceState(null, '', newPath);
             }
             break;

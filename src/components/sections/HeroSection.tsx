@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../../hero.css";
+import vrHeadsetImage from "../../assets/vr-headset2.png";
 
 const HeroSection = () => {
   const starsRef = useRef<HTMLDivElement>(null);
@@ -61,7 +62,7 @@ const HeroSection = () => {
       {/* VR Image bottom right */}
       <div className="absolute bottom-0 right-0 max-w-[300px] md:max-w-[400px] z-10">
         <img
-          src="src/assets/vr-headset2.png"
+          src={vrHeadsetImage}
           alt="Person wearing VR headset"
           className="w-full h-auto"
         />

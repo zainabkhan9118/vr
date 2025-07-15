@@ -17,7 +17,7 @@ export const useScrollSpy = (sectionIds: string[]) => {
           
           if (isInView) {
             setActiveSection(sectionId);
-            const newPath = sectionId === 'hero' ? '/' : `/${sectionId}`;
+            const newPath = sectionId === 'hero' ? '/' : `/#${sectionId}`;
             navigate(newPath, { replace: true });
             break;
           }

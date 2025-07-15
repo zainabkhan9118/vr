@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
 const Features = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
 
@@ -49,7 +49,7 @@ const Experience = () => {
           Explore Immersive<br />
           Experiences
         </h1>
-        
+
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
           <Card className="w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
             background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",

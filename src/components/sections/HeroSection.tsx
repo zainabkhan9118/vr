@@ -58,12 +58,15 @@ const HeroSection = () => {
           </div>
       </div>
 
-      {/* VR Image bottom right */}
-      <div className="absolute bottom-0 right-0 max-w-[300px] md:max-w-[400px] z-10">
+      {/* VR Image bottom right - Only in Hero section */}
+      <div className="absolute right-0 z-10
+                      max-w-[150px] sm:max-w-[200px] 
+                      md:max-w-[250px] lg:max-w-[300px] xl:max-w-[400px]
+                      bottom-[-20px] sm:bottom-[-10px] md:bottom-0">
         <img
           src="/vr-headset2.png"
           alt="Person wearing VR headset"
-          className="w-full h-auto"
+          className="w-full h-auto opacity-80 md:opacity-100"
         />
       </div>
     </section>

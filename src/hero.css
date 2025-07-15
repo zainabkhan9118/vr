@@ -1,0 +1,43 @@
+This creates a quick CSS file with some additional styles for our hero section
+
+.hero-gradient {
+  background: linear-gradient(135deg, #150D40 0%, #1F1163 50%, #150D40 100%);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.button-blue {
+  background-color: #3652E3;
+  box-shadow: 0 4px 14px rgba(54, 82, 227, 0.4);
+}
+
+.button-purple {
+  background-color: #6C4DC1;
+  box-shadow: 0 4px 14px rgba(108, 77, 193, 0.4);
+}
+
+/* For the colored glow on VR headset */
+.vr-glow {
+  position: relative;
+}
+
+.vr-glow::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: radial-gradient(ellipse at center, rgba(255,0,255,0.3) 0%, rgba(62,25,255,0.2) 50%, transparent 70%);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+/* Star animation */
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.2; }
+}

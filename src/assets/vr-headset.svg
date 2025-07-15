@@ -1,0 +1,39 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- VR Headset -->
+  <g transform="translate(100, 100)">
+    <!-- Main Headset Body -->
+    <rect x="75" y="120" width="250" height="150" rx="30" fill="#1A0E57" stroke="#6C4DC1" stroke-width="2"/>
+    <rect x="85" y="130" width="230" height="130" rx="25" fill="#2A1A6F" stroke="#6C4DC1" stroke-width="1"/>
+    
+    <!-- Headset Straps -->
+    <path d="M75 170 C25 170, 25 50, 75 50 L325 50 C375 50, 375 170, 325 170" stroke="#6C4DC1" stroke-width="4" fill="none"/>
+    
+    <!-- Face Cushion -->
+    <path d="M85 195 Q200 215, 315 195" stroke="#BDA8F3" stroke-width="3" fill="none"/>
+    
+    <!-- VR Screen -->
+    <rect x="125" y="145" width="150" height="80" rx="5" fill="#151033"/>
+    <rect x="135" y="155" width="130" height="60" rx="3" fill="#6C4DC1" opacity="0.3"/>
+    
+    <!-- Light Effects -->
+    <circle cx="200" cy="185" r="20" fill="#9FE7E4" opacity="0.3"/>
+    <circle cx="200" cy="185" r="12" fill="#9FE7E4" opacity="0.5"/>
+  </g>
+  
+  <!-- Person -->
+  <g transform="translate(120, 130)">
+    <!-- Head -->
+    <path d="M200 300 C230 300, 260 270, 260 220 C260 170, 230 140, 200 140 C170 140, 140 170, 140 220 C140 270, 170 300, 200 300 Z" fill="#6C4DC1" opacity="0.9"/>
+    
+    <!-- Neck -->
+    <path d="M185 300 L185 350 L215 350 L215 300" fill="#6C4DC1" opacity="0.9"/>
+    
+    <!-- Shoulder Outline -->
+    <path d="M170 350 C120 370, 100 420, 100 450 L300 450 C300 420, 280 370, 230 350" fill="#2A1A6F" opacity="0.7"/>
+    
+    <!-- Hand with Phone -->
+    <path d="M170 400 C150 410, 130 430, 120 450 L150 450 C160 430, 170 410, 180 400" fill="#6C4DC1" opacity="0.9"/>
+    <rect x="120" y="390" width="40" height="80" rx="5" fill="#151033"/>
+    <rect x="125" y="395" width="30" height="70" rx="3" fill="#9FE7E4" opacity="0.3"/>
+  </g>
+</svg>

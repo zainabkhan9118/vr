@@ -9,13 +9,25 @@ This creates a quick CSS file with some additional styles for our hero section
 }
 
 .button-blue {
-  background-color: #3652E3;
-  box-shadow: 0 4px 14px rgba(54, 82, 227, 0.4);
+  background-color: #2A1A6F;
+  box-shadow: 0 4px 14px rgba(42, 26, 111, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-blue:hover {
+  background-color: #3b2996;
+  transform: translateY(-2px);
 }
 
 .button-purple {
   background-color: #6C4DC1;
   box-shadow: 0 4px 14px rgba(108, 77, 193, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-purple:hover {
+  background-color: #7d5ed2;
+  transform: translateY(-2px);
 }
 
 /* For the colored glow on VR headset */
@@ -30,7 +42,7 @@ This creates a quick CSS file with some additional styles for our hero section
   left: 0;
   width: 100%;
   height: 40%;
-  background: radial-gradient(ellipse at center, rgba(255,0,255,0.3) 0%, rgba(62,25,255,0.2) 50%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(108, 77, 193, 0.6) 0%, rgba(42, 26, 111, 0.4) 50%, transparent 70%);
   z-index: -1;
   filter: blur(40px);
 }
@@ -40,4 +52,70 @@ This creates a quick CSS file with some additional styles for our hero section
   0% { opacity: 0.2; }
   50% { opacity: 0.8; }
   100% { opacity: 0.2; }
+}
+
+/* Stars for the star field */
+.stars {
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.star-medium {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.3);
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.star-bright {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5),
+              0 0 8px 4px rgba(189, 168, 243, 0.3);
+  animation: twinkle-bright 5s infinite ease-in-out;
+}
+
+@keyframes twinkle-bright {
+  0% { opacity: 0.6; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.6; transform: scale(0.8); }
+}
+
+/* Galaxy background */
+.galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Enhance text visibility with shadows */
+.text-shadow-lg {
+  text-shadow: 
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.3),
+    0 0 30px rgba(0,0,0,0.2);
+}
+
+.hero-title {
+  position: relative;
+  z-index: 20;
+  text-shadow: 
+    0 0 15px rgba(0,0,0,0.6),
+    0 0 30px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+  position: relative;
+  z-index: 20;
+  text-shadow: 
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.3);
 }

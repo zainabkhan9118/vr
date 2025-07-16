@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
+import FeaturesGalaxy from '../ui/FeaturesGalaxy'
 const Features = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const starsRef = useRef<HTMLDivElement>(null);
@@ -39,9 +40,14 @@ const Features = () => {
     
     return (
       <section ref={sectionRef} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
-        backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
-        backgroundColor: "#0a0339"
+        backgroundImage: "radial-gradient(circle at 50% 50%, #2D1B69 0%, #1A0B50 50%, #0a0339 100%)",
+        backgroundColor: "#1A0B50"
       }}>
+        {/* FeaturesGalaxy Animation Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <FeaturesGalaxy />
+        </div>
+        
         <div className="stars" ref={starsRef}></div>
         <div className="max-w-6xl mx-auto py-16 relative z-10">
           <h1 className="text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">

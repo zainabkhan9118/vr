@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import '../sections/stars.css';
+import { useRef, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import PolicyGalaxy from '../ui/PolicyGalaxy';
 
 type PolicyItem = {
   title: string;
@@ -16,33 +16,11 @@ const policies: PolicyItem[] = [
 
 const Policy = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const starsRef = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  useEffect(() => {
-    if (starsRef.current) {
-      starsRef.current.innerHTML = '';
-      const count = 100;
-      for (let i = 0; i < count; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-        const size = Math.random() * 2;
-        const delay = Math.random() * 5;
-        star.style.left = `${x}%`;
-        star.style.top = `${y}%`;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.animationDelay = `${delay}s`;
-        starsRef.current.appendChild(star);
-      }
-    }
-  }, []);
 
   return (
     <section
@@ -53,7 +31,7 @@ const Policy = () => {
         backgroundColor: "#0a0339",
       }}
     >
-      <div className="stars" ref={starsRef}></div>
+      <PolicyGalaxy />
       <div className="max-w-6xl mx-auto py-16 relative z-10">
         <h1 className="text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
           Legal & Policies

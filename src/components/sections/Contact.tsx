@@ -1,49 +1,17 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
+import ContactGalaxy from '../ui/ContactGalaxy'
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const starsRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  useEffect(() => {
-    if (starsRef.current) {
-      // Clear existing stars
-      starsRef.current.innerHTML = '';
-      
-      // Generate random stars
-      const count = 100;
-      for (let i = 0; i < count; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        
-        // Random position
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-        
-        // Random size
-        const size = Math.random() * 2;
-        
-        // Random animation delay
-        const delay = Math.random() * 5;
-        
-        star.style.left = `${x}%`;
-        star.style.top = `${y}%`;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.animationDelay = `${delay}s`;
-        
-        starsRef.current.appendChild(star);
-      }
-    }
-  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -80,7 +48,7 @@ const Contact = () => {
       backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
       backgroundColor: "#0a0339"
     }}>
-      <div className="stars" ref={starsRef}></div>
+      <ContactGalaxy />
       <div className="max-w-4xl mx-auto py-16 relative z-10 w-full">
         <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-tight text-[#fcf7e9] text-center">
           Let's Connect

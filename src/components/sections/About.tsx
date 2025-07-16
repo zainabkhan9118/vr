@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { Card, CardContent } from '../ui/card'
+import SubtleGalaxy from '../ui/SubtleGalaxy'
 import './stars.css'
+
 
 const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -43,7 +45,14 @@ const About = () => {
       backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
       backgroundColor: "#0a0339"
     }}>
+      {/* Three.js SubtleGalaxy Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <SubtleGalaxy />
+      </div>
+      
+      {/* Existing stars overlay */}
       <div className="stars" ref={starsRef}></div>
+      
       <div className="max-w-6xl mx-auto py-16 relative z-10">
         <h1 className="text-5xl md:text-7xl font-semibold mb-8 leading-tight text-[#fcf7e9]">
           What is<br />
@@ -57,7 +66,7 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
           <Card className="w-full md:w-80 rounded-2xl overflow-hidden" style={{ 
-            background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+            background: "rgba(54, 43, 123, 0.15)",
             backdropFilter: "blur(10px)",
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
@@ -75,7 +84,7 @@ const About = () => {
           </Card>
           
           <Card className="w-full md:w-80 rounded-2xl overflow-hidden" style={{ 
-            background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+            background: "rgba(54, 43, 123, 0.15)",
             backdropFilter: "blur(10px)",
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"

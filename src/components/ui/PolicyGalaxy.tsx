@@ -37,20 +37,20 @@ const PolicyGalaxy = () => {
 
     // Create protective barrier rings
     const barrierGeometry = new THREE.RingGeometry(0.2, 0.25, 6);
-    const barriers = [];
+    const barriers: Array<{
+      mesh: THREE.Mesh;
+      rotationSpeed: {
+        x: number;
+        y: number;
+        z: number;
+      };
+      pulsePhase: number;
+    }> = [];
 
     // Create trust connection lines
     const connectionGeometry = new THREE.BufferGeometry();
     const connectionPositions = [];
     const connectionColors = [];
-
-    const colorOptions = [
-      new THREE.Color(POLICY_COLORS.shieldGold),
-      new THREE.Color(POLICY_COLORS.securityBlue),
-      new THREE.Color(POLICY_COLORS.protectionGreen),
-      new THREE.Color(POLICY_COLORS.trustPurple),
-      new THREE.Color(POLICY_COLORS.vaultCyan)
-    ];
 
     // Position security shields in protective layers
     const shields = [];
@@ -222,7 +222,7 @@ const PolicyGalaxy = () => {
         barrier.mesh.scale.setScalar(pulse);
         
         // Opacity pulsing for security sweep
-        barrier.mesh.material.opacity = 0.15 + Math.sin(time + index) * 0.05;
+        (barrier.mesh.material as THREE.MeshBasicMaterial).opacity = 0.15 + Math.sin(time + index) * 0.05;
       });
 
       // Overall protective field breathing
@@ -259,7 +259,7 @@ const PolicyGalaxy = () => {
       connectionMaterial.dispose();
       
       barriers.forEach(barrier => {
-        barrier.mesh.material.dispose();
+        (barrier.mesh.material as THREE.MeshBasicMaterial).dispose();
       });
       
       renderer.dispose();

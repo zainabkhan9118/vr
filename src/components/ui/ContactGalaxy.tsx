@@ -37,7 +37,12 @@ const ContactGalaxy = () => {
 
     // Create wave/pulse rings
     const ringGeometry = new THREE.RingGeometry(0.1, 0.15, 32);
-    const rings = [];
+    const rings: Array<{
+      mesh: THREE.Mesh;
+      scale: number;
+      maxScale: number;
+      speed: number;
+    }> = [];
 
     // Create signal transmission lines
     const lineGeometry = new THREE.BufferGeometry();
@@ -191,7 +196,7 @@ const ContactGalaxy = () => {
       nodeMaterial.opacity = 0.8 + Math.sin(time * 3) * 0.2;
 
       // Animate pulse rings for message transmission
-      rings.forEach((ring, index) => {
+      rings.forEach((ring) => {
         ring.scale += ring.speed;
         
         if (ring.scale > ring.maxScale) {
@@ -205,7 +210,7 @@ const ContactGalaxy = () => {
         }
 
         ring.mesh.scale.setScalar(ring.scale);
-        ring.mesh.material.opacity = Math.max(0, 0.4 - (ring.scale / ring.maxScale) * 0.4);
+        (ring.mesh.material as THREE.MeshBasicMaterial).opacity = Math.max(0, 0.4 - (ring.scale / ring.maxScale) * 0.4);
       });
 
       // Subtle breathing effect for the entire network
@@ -242,7 +247,7 @@ const ContactGalaxy = () => {
       lineMaterial.dispose();
       
       rings.forEach(ring => {
-        ring.mesh.material.dispose();
+        (ring.mesh.material as THREE.MeshBasicMaterial).dispose();
       });
       
       renderer.dispose();

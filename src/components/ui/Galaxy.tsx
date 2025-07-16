@@ -67,11 +67,11 @@ const Galaxy = ({ className = '' }: GalaxyProps) => {
     galaxyRef.current.renderer = renderer;
 
     // Initial galaxy tilt
-    const initialRotation = {
-      x: -Math.PI * 0.2, // Tilt forward
-      y: Math.PI * 0.1,  // Slight Y rotation
-      z: Math.PI * 0.15  // Slight Z tilt
-    };
+    // const initialRotation = {
+    //   x: -Math.PI * 0.2, // Tilt forward
+    //   y: Math.PI * 0.1,  // Slight Y rotation
+    //   z: Math.PI * 0.15  // Slight Z tilt
+    // };
     
     // Create galaxy particles
     const particlesGeometry = new THREE.BufferGeometry();
@@ -96,7 +96,7 @@ const Galaxy = ({ className = '' }: GalaxyProps) => {
     const spin = 2.2; // More spiral effect
     const randomness = 0.2; // Less random for more structure
     const randomnessPower = 2.8;
-    const coreSize = 0.8;
+    // const coreSize = 0.8;
     
     for (let i = 0; i < particlesCount; i++) {
       const i3 = i * 3;

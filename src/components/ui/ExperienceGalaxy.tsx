@@ -29,7 +29,11 @@ const ExperienceGalaxy = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     // Create VR portal rings
-    const portalRings = [];
+    const portalRings: Array<{
+      mesh: THREE.Mesh;
+      speed: number;
+      originalZ: number;
+    }> = [];
     for (let i = 0; i < 8; i++) {
       const ringGeometry = new THREE.RingGeometry(0.5 + i * 0.3, 0.6 + i * 0.3, 32);
       const ringMaterial = new THREE.MeshBasicMaterial({
@@ -112,7 +116,15 @@ const ExperienceGalaxy = () => {
 
     // Create dimensional gateway effect with wireframe spheres
     const gatewayGeometry = new THREE.SphereGeometry(1, 16, 12);
-    const gateways = [];
+    const gateways: Array<{
+      mesh: THREE.Mesh;
+      rotationSpeed: {
+        x: number;
+        y: number;
+        z: number;
+      };
+      pulsePhase: number;
+    }> = [];
 
     for (let i = 0; i < 4; i++) {
       const gatewayMaterial = new THREE.MeshBasicMaterial({
@@ -158,7 +170,7 @@ const ExperienceGalaxy = () => {
         }
 
         // Pulsing opacity for dimensional effect
-        ring.mesh.material.opacity = (0.6 - index * 0.05) + Math.sin(time * 2 + index) * 0.2;
+        (ring.mesh.material as THREE.MeshBasicMaterial).opacity = (0.6 - index * 0.05) + Math.sin(time * 2 + index) * 0.2;
       });
 
       // Animate VR travel particles
@@ -226,11 +238,11 @@ const ExperienceGalaxy = () => {
       particleMaterial.dispose();
       
       portalRings.forEach(ring => {
-        ring.mesh.material.dispose();
+        (ring.mesh.material as THREE.MeshBasicMaterial).dispose();
       });
       
       gateways.forEach(gateway => {
-        gateway.mesh.material.dispose();
+        (gateway.mesh.material as THREE.MeshBasicMaterial).dispose();
       });
       
       renderer.dispose();

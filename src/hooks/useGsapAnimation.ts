@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 // Custom hook for GSAP animations
 export const useGsapAnimation = () => {
   const component = useRef(null);
-  const tl = useRef<gsap.core.Timeline>();
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

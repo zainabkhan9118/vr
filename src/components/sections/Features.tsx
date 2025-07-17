@@ -2,9 +2,10 @@ import { useEffect, useRef } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
 import FeaturesGalaxy from '../ui/FeaturesGalaxy'
+import { usePageAnimation } from '../../hooks/usePageAnimation'
 const Features = () => {
-    const sectionRef = useRef<HTMLElement>(null);
     const starsRef = useRef<HTMLDivElement>(null);
+    const { component } = usePageAnimation();
     
     useEffect(() => {
       if (starsRef.current) {
@@ -39,7 +40,7 @@ const Features = () => {
     }, []);
     
     return (
-      <section ref={sectionRef} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
+      <section ref={component} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
         backgroundImage: "radial-gradient(circle at 50% 50%, #2D1B69 0%, #1A0B50 50%, #0a0339 100%)",
         backgroundColor: "#1A0B50"
       }}>
@@ -50,13 +51,13 @@ const Features = () => {
         
         <div className="stars" ref={starsRef}></div>
         <div className="max-w-6xl mx-auto py-16 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
+          <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
             Everything You Need<br />
             to Elevate Your Mind
           </h1>
           
           <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
-            <Card className="w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -83,7 +84,7 @@ const Features = () => {
               </CardContent>
             </Card>
             
-            <Card className="w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -114,7 +115,7 @@ const Features = () => {
               </CardContent>
             </Card>
   
-            <Card className="w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",

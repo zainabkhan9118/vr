@@ -1,6 +1,8 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import PolicyGalaxy from '../ui/PolicyGalaxy';
+import { usePageAnimation } from '../../hooks/usePageAnimation';
+import '../../hero.css';
 
 type PolicyItem = {
   title: string;
@@ -15,7 +17,7 @@ const policies: PolicyItem[] = [
 ];
 
 const Policy = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const { component } = usePageAnimation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -24,7 +26,7 @@ const Policy = () => {
 
   return (
     <section
-      ref={sectionRef}
+      ref={component}
       className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative"
       style={{
         backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
@@ -33,12 +35,12 @@ const Policy = () => {
     >
       <PolicyGalaxy />
       <div className="max-w-6xl mx-auto py-16 relative z-10">
-        <h1 className="text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
+        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
           Legal & Policies
         </h1>
 
         {/* 🔽 Accordion inserted here */}
-        <div className="max-w-2xl mx-auto mb-20 space-y-4 text-left">
+        <div className="page-card max-w-2xl mx-auto mb-20 space-y-4 text-left">
           {policies.map((policy, index) => (
             <div
               key={index}
@@ -63,18 +65,18 @@ const Policy = () => {
         </div>
         {/* 🔼 Accordion ends */}
 
-        <p className="text-xl max-w-3xl mx-auto mb-20 leading-relaxed text-[#fcf7e9]">
+        <p className="page-subtitle text-xl max-w-3xl mx-auto mb-20 leading-relaxed text-[#fcf7e9]">
           Ready to transfor your mental state?<br />
           Join thousands exploring immersive wellbeing<br />
           with Mind Player.
         </p>
 
          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="button-purple text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[240px]">
+            <button className="page-button button-purple text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[240px]">
               Download Now
             </button>
             
-            <button className="button-blue text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[180px]">
+            <button className="page-button button-blue text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[180px]">
               Explore Minds
             </button>
           </div>

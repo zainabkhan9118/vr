@@ -1,11 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import ContactGalaxy from '../ui/ContactGalaxy'
+import { usePageAnimation } from '../../hooks/usePageAnimation'
 
 const Contact = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const { component } = usePageAnimation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,21 +45,21 @@ const Contact = () => {
   };
 
   return (
-    <section ref={sectionRef} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white relative" style={{ 
+    <section ref={component} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white relative" style={{ 
       backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 100%)",
       backgroundColor: "#0a0339"
     }}>
       <ContactGalaxy />
       <div className="max-w-4xl mx-auto py-16 relative z-10 w-full">
-        <h1 className="text-5xl md:text-7xl font-semibold mb-6 leading-tight text-[#fcf7e9] text-center">
+        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-6 leading-tight text-[#fcf7e9] text-center">
           Let's Connect
         </h1>
         
-        <p className="text-xl md:text-2xl mb-12 text-center max-w-2xl mx-auto">
+        <p className="page-subtitle text-xl md:text-2xl mb-12 text-center max-w-2xl mx-auto">
           Questions? Feedback? Business opportunity? We'd love to hear from you.
         </p>
         
-        <div className="max-w-2xl mx-auto bg-[#0a0339]/80 p-8 rounded-2xl backdrop-blur-md border border-white/10">
+        <div className="page-card max-w-2xl mx-auto bg-[#0a0339]/80 p-8 rounded-2xl backdrop-blur-md border border-white/10">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <Input
@@ -103,7 +104,7 @@ const Contact = () => {
               <Button 
                 type="submit"
                 disabled={isSubmitting} 
-                className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-2 h-12 rounded-lg transition-all duration-300 text-xl"
+                className="page-button bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-2 h-12 rounded-lg transition-all duration-300 text-xl"
               >
                 {isSubmitting ? 'Sending...' : 'Send'}
               </Button>

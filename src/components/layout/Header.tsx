@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menubar, MenubarMenu, MenubarTrigger } from '../ui/menubar';
-import { Button } from '../ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

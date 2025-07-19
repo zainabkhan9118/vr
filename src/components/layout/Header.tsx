@@ -140,10 +140,10 @@ const Header = () => {
           </div> */}
           
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center pr-2">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-mindful-aqua focus:outline-none transition-colors"
+              className="text-white hover:text-mindful-aqua focus:outline-none transition-colors pr-2"
               aria-label="Toggle mobile menu"
             >
               <svg 

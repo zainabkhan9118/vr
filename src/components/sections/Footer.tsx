@@ -15,18 +15,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Navigation & Store Buttons */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex gap-6 text-sm mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm mb-4 md:mb-0 w-full sm:w-auto items-center sm:items-start">
             <a href="/" className="hover:underline text-white/80">Home</a>
             <a href="/about" className="hover:underline text-white/80">About</a>
-            <a href="experience" className="hover:underline text-white/80">Experiences</a>
+            <a href="/experience" className="hover:underline text-white/80">Experiences</a>
             <a href="/features" className="hover:underline text-white/80">Features</a>
             <a href="/contact" className="hover:underline text-white/80">Contact</a>
             <a href="/policy" className="hover:underline text-white/80">Privacy Policy</a>
           </div>
-          <div className="flex gap-3">
-            <img src="/appstore.svg" alt="App Store" className="h-20 w-20" />
-            <img src="/playstore.svg" alt="Play Store" className="h-20 w-20" />
+          <div className="flex gap-3 w-full sm:w-auto justify-center md:justify-end">
+            <img src="/appstore.svg" alt="App Store" className="h-14 w-14 sm:h-20 sm:w-20" />
+            <img src="/playstore.svg" alt="Play Store" className="h-14 w-14 sm:h-20 sm:w-20" />
           </div>
         </div>
 

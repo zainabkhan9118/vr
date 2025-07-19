@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
 import ExperienceGalaxy from '../ui/ExperienceGalaxy'
@@ -52,60 +52,85 @@ const Experience = () => {
       
       <div className="stars" ref={starsRef}></div>
       <div className="max-w-6xl mx-auto py-16 relative z-10">
-        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
+        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9] mt-8">
           Explore Immersive<br />
           Experiences
         </h1>
 
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
-          <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
-            background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
-            backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
-          }}>
-            <CardContent className="p-10 text-center text-white">
-              <h2 className="text-3xl mb-6 font-medium text-cyan-300">360 & VR<br /> Worlds</h2>
-              <p className="text-lg leading-relaxed">
-                Breathtaking<br />
-                visuals and<br />
-                soundscapes.
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden" style={{ 
-            background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
-            backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
-          }}>
-            <CardContent className="p-10 text-center text-white">
-              <h2 className="text-3xl mb-6 font-medium text-cyan-300">Create Your<br/>Own <span className='text-blue-500'>Minds</span></h2>
-              <p className="text-lg leading-relaxed">
-                Combine sessions,<br />
-                sounds, visuals.
-              </p>
-            </CardContent>
-          </Card>
+          {/* Card 1: 360 & VR Worlds */}
+          <div className="relative group w-full md:w-80 min-h-[370px]">
+            <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
+              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+            }}>
+              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
+                <h2 className="text-3xl mb-6 font-medium text-cyan-300">360 & VR<br /> Worlds</h2>
+                <p className="text-lg leading-relaxed">
+                  Breathtaking<br />
+                  visuals and<br />
+                  soundscapes.
+                </p>
+              </CardContent>
+              {/* Reveal on hover */}
+              <div className="absolute inset-0 bg-cyan-900/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
+                <svg width="48" height="48" fill="none" className="mb-3"><circle cx="24" cy="24" r="24" fill="#06b6d4" fillOpacity="0.15"/><path d="M12 24c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#06b6d4" strokeWidth="2.5" strokeLinecap="round"/><rect x="18" y="30" width="12" height="4" rx="2" fill="#06b6d4"/></svg>
+                <span className="text-lg font-semibold text-white">Step into stunning virtual worlds and let your mind wander.</span>
+              </div>
+            </Card>
+          </div>
 
-          <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden" style={{ 
-            background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
-            backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
-          }}>
-            <CardContent className="p-10 text-center text-white">
-              <h2 className="text-3xl mb-6 font-medium text-cyan-300">Live & Group<br/>Sessions</h2>
-              <p className="text-lg leading-relaxed">
-                Join others in<br />
-                in-time meditations,<br />
-                hypnosis or coaching.
-              </p>
-            </CardContent>
-          </Card>
+          {/* Card 2: Create Your Own Minds */}
+          <div className="relative group w-full md:w-80 min-h-[370px]">
+            <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
+              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+            }}>
+              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
+                <h2 className="text-3xl mb-6 font-medium text-cyan-300">Create Your<br/>Own <span className='text-blue-500'>Minds</span></h2>
+                <p className="text-lg leading-relaxed">
+                  Combine sessions,<br />
+                  sounds, visuals.
+                </p>
+              </CardContent>
+              {/* Reveal on hover */}
+              <div className="absolute inset-0 bg-blue-900/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
+                <svg width="48" height="48" fill="none" className="mb-3"><circle cx="24" cy="24" r="24" fill="#3b82f6" fillOpacity="0.15"/><path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round"/><rect x="20" y="20" width="8" height="8" rx="2" fill="#3b82f6"/></svg>
+                <span className="text-lg font-semibold text-white">Mix and match your favorite experiences to create your own Mind journeys.</span>
+              </div>
+            </Card>
+          </div>
+
+          {/* Card 3: Live & Group Sessions */}
+          <div className="relative group w-full md:w-80 min-h-[370px]">
+            <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
+              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+            }}>
+              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
+                <h2 className="text-3xl mb-6 font-medium text-cyan-300">Live & Group<br/>Sessions</h2>
+                <p className="text-lg leading-relaxed">
+                  Join others in<br />
+                  in-time meditations,<br />
+                  hypnosis or coaching.
+                </p>
+              </CardContent>
+              {/* Reveal on hover */}
+              <div className="absolute inset-0 bg-purple-900/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-6">
+                <svg width="48" height="48" fill="none" className="mb-3"><circle cx="24" cy="24" r="24" fill="#a78bfa" fillOpacity="0.15"/><path d="M24 16v16M16 24h16" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round"/><rect x="18" y="30" width="12" height="4" rx="2" fill="#a78bfa"/></svg>
+                <span className="text-lg font-semibold text-white">Connect live for group meditations, hypnosis, or coaching sessions.</span>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
+ 
     </section>
   )
 }

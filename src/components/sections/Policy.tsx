@@ -10,10 +10,26 @@ type PolicyItem = {
 };
 
 const policies: PolicyItem[] = [
-  { title: "Privacy Policy", content: "Your privacy is important to us..." },
-  { title: "Terms of Use", content: "These are the terms for using our app..." },
-  { title: "Cookie Policy", content: "We use cookies to improve user experience..." },
-  { title: "Content Guidelines", content: "Please follow these rules..." },
+  {
+    title: "Privacy Policy",
+    content:
+      `We value your privacy and are committed to protecting your personal information. We only collect data necessary to provide and improve our services. Your data is never sold to third parties. You can request deletion of your data at any time by contacting us at hello@mindplayer.com.`
+  },
+  {
+    title: "Terms of Use",
+    content:
+      `By using Mind Player, you agree to abide by our terms. You must be at least 16 years old or have parental consent. Do not misuse the app or attempt to access it in unauthorized ways. We reserve the right to suspend accounts that violate these terms.`
+  },
+  {
+    title: "Cookie Policy",
+    content:
+      `We use cookies and similar technologies to enhance your experience, analyze usage, and deliver personalized content. You can manage your cookie preferences in your browser settings. Continued use of the app implies consent to our cookie policy.`
+  },
+  {
+    title: "Content Guidelines",
+    content:
+      `Please use Mind Player respectfully. Do not upload or share content that is illegal, harmful, or violates the rights of others. We reserve the right to remove content and restrict access for violations of these guidelines.`
+  },
 ];
 
 const Policy = () => {
@@ -63,23 +79,6 @@ const Policy = () => {
             </div>
           ))}
         </div>
-        {/* 🔼 Accordion ends */}
-
-        <p className="page-subtitle text-xl max-w-3xl mx-auto mb-20 leading-relaxed text-[#fcf7e9]">
-          Ready to transfor your mental state?<br />
-          Join thousands exploring immersive wellbeing<br />
-          with Mind Player.
-        </p>
-
-         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="page-button button-purple text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[240px]">
-              Download Now
-            </button>
-            
-            <button className="page-button button-blue text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[180px]">
-              Explore Minds
-            </button>
-          </div>
       </div>
     </section>
   );

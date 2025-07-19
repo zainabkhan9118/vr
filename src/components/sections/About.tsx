@@ -60,9 +60,7 @@ const About = () => {
           Mind Player?
         </h1>
         <p className="page-subtitle text-xl max-w-3xl mx-auto mb-20 leading-relaxed text-[#fcf7e9]">
-          Mind Player is a pioneering MindTech platform<br />
-          that helps you take care of a mind elevate it to<br />
-          the next level to a next vllevel.
+          Mind Player is a pioneering MindTech platform that empowers you to elevate your mental wellbeing through immersive VR, neuroscience, and AI-powered experiences.
         </p>
         
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
@@ -100,6 +98,23 @@ const About = () => {
               </p>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Why Now? Section */}
+        <div className="mt-16 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center mb-4">
+            {/* Brain to Tech Icon (placeholder) */}
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" className="mb-2">
+              <circle cx="32" cy="32" r="32" fill="#6D28D9" fillOpacity="0.2" />
+              <path d="M20 32c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#A78BFA" strokeWidth="3" strokeLinecap="round" />
+              <rect x="38" y="38" width="10" height="10" rx="2" fill="#A78BFA" />
+              <rect x="16" y="38" width="10" height="10" rx="2" fill="#A78BFA" />
+            </svg>
+            <h3 className="text-2xl font-bold mb-2 text-[#fcf7e9]">Why Now?</h3>
+          </div>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            Mental health challenges are at an all-time high, and traditional solutions aren't enough. Mind Player brings innovation to mental wellness, combining neuroscience, technology, and immersive experiences to meet the urgent demand for new ways to support the mind.
+          </p>
         </div>
       </div>
     </div>

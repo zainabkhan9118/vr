@@ -57,11 +57,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   Home
                 </MenubarTrigger>
@@ -69,11 +69,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/about')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/about') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/about')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/about') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   About
                 </MenubarTrigger>
@@ -81,11 +81,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/experience')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/experience') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/experience')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/experience') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   Experiences
                 </MenubarTrigger>
@@ -93,11 +93,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/features')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/features') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/features')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/features') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   Features
                 </MenubarTrigger>
@@ -105,11 +105,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/contact')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/contact') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/contact')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/contact') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   Contact
                 </MenubarTrigger>
@@ -117,11 +117,11 @@ const Header = () => {
               <MenubarMenu>
                 <MenubarTrigger 
                   onClick={() => navigateToPage('/policy')}
-                  className={`font-inter cursor-pointer transition-colors ${
-                    isActive('/policy') 
-                      ? 'text-mindful-aqua' 
-                      : 'text-white hover:text-mindful-aqua'
-                  }`}
+                  className={`font-inter cursor-pointer transition-colors font-medium ${
+                    isActive('/policy')
+                      ? 'text-black bg-white font-bold shadow-md'
+                      : 'text-white'
+                  } ${isActive('/policy') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
                 >
                   Policy
                 </MenubarTrigger>
@@ -168,61 +168,61 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-indigo-night/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
               <button
                 onClick={() => navigateToPage('/')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 Home
               </button>
               <button
                 onClick={() => navigateToPage('/about')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/about')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/about') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 About
               </button>
               <button
                 onClick={() => navigateToPage('/experience')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/experience')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/experience') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 Experiences
               </button>
               <button
                 onClick={() => navigateToPage('/features')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/features')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/features') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 Features
               </button>
               <button
                 onClick={() => navigateToPage('/contact')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/contact')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/contact') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 Contact
               </button>
               <button
                 onClick={() => navigateToPage('/policy')}
-                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-md font-inter transition-colors font-medium ${
                   isActive('/policy')
-                    ? 'text-mindful-aqua bg-mindful-aqua/10'
-                    : 'text-white hover:text-mindful-aqua hover:bg-white/5'
-                }`}
+                    ? 'text-mindful-aqua bg-white/80 font-bold shadow-md'
+                    : 'text-white'
+                } ${isActive('/policy') ? '' : 'hover:text-mindful-aqua hover:bg-white/10'}`}
               >
                 Policy
               </button>

@@ -56,14 +56,15 @@ const Features = () => {
             to Elevate Your Mind
           </h1>
           
-          <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
-            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+            {/* Mind Sessions */}
+            <Card className="page-card rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg h-full" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
             }}>
-              <CardContent className="p-10 text-center text-white">
+              <CardContent className="p-8 text-center text-white flex flex-col h-full justify-center">
                 <div className="flex justify-center mb-5">
                   <div className="rounded-full bg-cyan-500/20 p-4 inline-block">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,23 +75,51 @@ const Features = () => {
                     </svg>
                   </div>
                 </div>
-                <h2 className="text-3xl mb-4 font-medium text-cyan-300">Mind Sessions</h2>
-                <p className="text-lg leading-relaxed">
-                  Meditations<br />
-                  hypnosis,<br />
-                  coaching,<br />
-                  breathwork
-                </p>
+                <h2 className="text-2xl mb-3 font-medium text-cyan-300">Mind Sessions</h2>
+                <ul className="text-base leading-relaxed space-y-1">
+                  <li>Meditations</li>
+                  <li>Hypnosis</li>
+                  <li>Coaching</li>
+                  <li>Breathwork</li>
+                  <li>Sleep stories</li>
+                </ul>
               </CardContent>
             </Card>
-            
-            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+
+            {/* Music & Sounds */}
+            <Card className="page-card rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg h-full" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
             }}>
-              <CardContent className="p-10 text-center text-white">
+              <CardContent className="p-8 text-center text-white flex flex-col h-full justify-center">
+                <div className="flex justify-center mb-5">
+                  <div className="rounded-full bg-cyan-500/20 p-4 inline-block">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 3v10.55A4 4 0 1 0 14 17" stroke="#4DD8FF" strokeWidth="1.5" strokeLinecap="round" />
+                      <circle cx="12" cy="17" r="4" stroke="#4DD8FF" strokeWidth="1.5" />
+                    </svg>
+                  </div>
+                </div>
+                <h2 className="text-2xl mb-3 font-medium text-cyan-300">Music & Sounds</h2>
+                <ul className="text-base leading-relaxed space-y-1">
+                  <li>Binaural beats</li>
+                  <li>Solfeggio</li>
+                  <li>EMDR</li>
+                  <li>Soundscapes</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* AI Mind Coach */}
+            <Card className="page-card rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg h-full" style={{ 
+              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+            }}>
+              <CardContent className="p-8 text-center text-white flex flex-col h-full justify-center">
                 <div className="flex justify-center mb-5">
                   <div className="rounded-full bg-cyan-500/20 p-4 inline-block">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,22 +135,23 @@ const Features = () => {
                     </svg>
                   </div>
                 </div>
-                <h2 className="text-3xl mb-4 font-medium text-cyan-300">AI Mind Coach</h2>
-                <p className="text-lg leading-relaxed">
-                  Personalized<br />
-                  suggestions and<br />
-                  daily support
-                </p>
+                <h2 className="text-2xl mb-3 font-medium text-cyan-300">AI Mind Coach</h2>
+                <ul className="text-base leading-relaxed space-y-1">
+                  <li>Personalized suggestions</li>
+                  <li>Daily support</li>
+                  <li>Guided journeys</li>
+                </ul>
               </CardContent>
             </Card>
-  
-            <Card className="page-card w-full md:w-80 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ 
+
+            {/* Community */}
+            <Card className="page-card rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg h-full" style={{ 
               background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
               backdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
             }}>
-              <CardContent className="p-10 text-center text-white">
+              <CardContent className="p-8 text-center text-white flex flex-col h-full justify-center">
                 <div className="flex justify-center mb-5">
                   <div className="rounded-full bg-cyan-500/20 p-4 inline-block">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,12 +164,39 @@ const Features = () => {
                     </svg>
                   </div>
                 </div>
-                <h2 className="text-3xl mb-4 font-medium text-cyan-300">Community</h2>
-                <p className="text-lg leading-relaxed">
-                  Create and join<br />
-                  group sessions<br />
-                  or private spaces
-                </p>
+                <h2 className="text-2xl mb-3 font-medium text-cyan-300">Community</h2>
+                <ul className="text-base leading-relaxed space-y-1">
+                  <li>Create & join group sessions</li>
+                  <li>Private spaces</li>
+                  <li>Peer support</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Free vs Premium as cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+            <Card className="rounded-2xl border border-cyan-400/30 bg-cyan-500/10 shadow-lg">
+              <CardContent className="p-8 text-left text-cyan-100">
+                <h3 className="text-2xl font-bold mb-3 text-cyan-200">Free</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Access basic mind sessions</li>
+                  <li>Standard music & soundscapes</li>
+                  <li>Join community groups</li>
+                  <li>Try AI Mind Coach (limited)</li>
+                </ul>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl border border-purple-400/30 bg-purple-500/10 shadow-lg">
+              <CardContent className="p-8 text-left text-purple-100">
+                <h3 className="text-2xl font-bold mb-3 text-purple-200">Premium</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>All mind sessions unlocked</li>
+                  <li>Exclusive music & advanced soundscapes</li>
+                  <li>Host private & group sessions</li>
+                  <li>Full AI Mind Coach access</li>
+                  <li>Early access to new features</li>
+                </ul>
               </CardContent>
             </Card>
           </div>

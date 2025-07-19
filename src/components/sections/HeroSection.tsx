@@ -61,28 +61,32 @@ const HeroSection = () => {
 
       {/* Content with enhanced visibility */}
       <div className="relative z-10 max-w-3xl px-4">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6 text-[#fcf7e9] drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-          <span className="hero-title block text-shadow-lg">Unlock the</span>
-          <span className="hero-title block text-shadow-lg">power of your mind</span>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6 text-[#fcf7e9] drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]" style={{textShadow: '0 2px 8px #fff, 0 2px 24px #0a0339'}}>
+          <span className="hero-title block">Unlock the</span>
+          <span className="hero-title block">power of your mind</span>
         </h1>
 
-        <p className="hero-subtitle text-lg sm:text-xl text-white mb-10 font-semibold leading-relaxed" 
-           style={{
-             textShadow: '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 4px 4px 8px rgba(0,0,0,0.8)'
-           }}>
+        <p
+          className="hero-subtitle text-xl sm:text-2xl mb-10 font-extrabold leading-relaxed max-w-2xl mx-auto text-center px-6 py-4 rounded-xl shadow-lg"
+          style={{
+            color: '#a5f3fc',
+            background: 'rgba(10, 3, 57, 0.72)',
+            textShadow: '0 4px 18px #0a0339, 0 2px 8px #000, 0 0px 2px #fff',
+            WebkitTextStroke: '1px #0a0339',
+          }}
+        >
           Step into a new era of mental wellness –<br />
-          powered by neuroscience, AI, and virtual reality.
+          <span style={{ color: '#a5f3fc' }}>powered by neuroscience, AI, and virtual reality.</span>
         </p>
 
-         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="hero-button button-blue text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[240px]">
-              Download the App
-            </button>
-            
-            <button className="hero-button button-purple text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[180px]">
-              Explore
-            </button>
-          </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <button className="hero-button button-blue text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[240px] shadow-lg shadow-cyan-400/30 hover:shadow-cyan-400/60 transition">
+            Download the App
+          </button>
+          <button className="hero-button button-purple text-white font-inter font-medium rounded-full px-8 py-4 text-lg min-w-[180px] shadow-lg shadow-purple-400/30 hover:shadow-purple-400/60 transition">
+            Explore
+          </button>
+        </div>
       </div>
 
       {/* VR Image bottom right - Only in Hero section */}

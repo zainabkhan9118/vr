@@ -7,8 +7,12 @@ const Home = () => {
   return (
     <div className="pt-16">
       <HeroSection />
-      <HomeIntro />
-      <ExperiencesPreview />
+      <section className="py-24 md:py-32">
+        <HomeIntro />
+      </section>
+      <section className="py-24 md:py-32">
+        <ExperiencesPreview />
+      </section>
     </div>
   );
 };

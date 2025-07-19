@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import '../sections/stars.css'
 import { Card, CardContent } from '../ui/card'
 import ExperienceGalaxy from '../ui/ExperienceGalaxy'

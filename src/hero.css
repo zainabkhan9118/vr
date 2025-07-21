@@ -31,7 +31,7 @@ This creates a quick CSS file with some additional styles for our hero section
 }
 
 /* For the colored glow on VR headset */
-.vr-glow {
+/* .vr-glow {
   position: relative;
 }
 
@@ -45,7 +45,19 @@ This creates a quick CSS file with some additional styles for our hero section
   background: radial-gradient(ellipse at center, rgba(108, 77, 193, 0.6) 0%, rgba(42, 26, 111, 0.4) 50%, transparent 70%);
   z-index: -1;
   filter: blur(40px);
+} */
+
+.vr-glow {
+  filter: drop-shadow(0 0 12px #9FE7E4) drop-shadow(0 0 20px #6C4DC1);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.vr-glow:hover {
+  filter: drop-shadow(0 0 16px #BDA8F3) drop-shadow(0 0 32px #9FE7E4);
+  transform: scale(1.03);
+}
+
+
 
 /* Star animation */
 @keyframes twinkle {

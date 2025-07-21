@@ -51,7 +51,15 @@ const Policy = () => {
     >
       <PolicyGalaxy />
       <div className="max-w-6xl mx-auto py-16 relative z-10">
-        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9]">
+        <h1
+          className="page-title text-5xl md:text-7xl font-bold mb-12 leading-tight"
+          style={{
+            color: '#2A1A6F',
+            WebkitTextStroke: '2px #fff',
+            textShadow: '0 2px 24px #B666D2cc, 0 1px 0 #fff',
+            letterSpacing: '0.01em',
+          }}
+        >
           Legal & Policies
         </h1>
 
@@ -60,25 +68,63 @@ const Policy = () => {
           {policies.map((policy, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-6 py-4 transition-all"
+              className={`policy-accordion-card px-6 py-4 rounded-xl transition-all ${openIndex === index ? 'active' : ''}`}
+              style={{
+                background: 'linear-gradient(135deg, #F8E6FB 0%, #DB91EF 100%)',
+                border: '1.5px solid #B666D2',
+                boxShadow: openIndex === index ? '0 6px 32px #DB91EF99, 0 2px 8px #B666D2cc' : '0 2px 12px #DB91EF22',
+                color: '#2A1A6F',
+              }}
             >
               <div
                 onClick={() => toggle(index)}
                 className="flex justify-between items-center cursor-pointer"
+                style={{ userSelect: 'none' }}
               >
-                <h3 className="text-lg font-medium text-[#fcf7e9]">{policy.title}</h3>
+                <h3
+                  className="text-lg font-bold"
+                  style={{
+                    color: '#2A1A6F',
+                    WebkitTextStroke: '1px #fff',
+                    textShadow: '0 2px 12px #B666D2aa, 0 1px 0 #fff',
+                  }}
+                >
+                  {policy.title}
+                </h3>
                 {openIndex === index ? (
-                  <Minus size={20} className="text-white/70" />
+                  <Minus size={20} className="text-[#2A1A6F]" />
                 ) : (
-                  <Plus size={20} className="text-white/70" />
+                  <Plus size={20} className="text-[#B666D2]" />
                 )}
               </div>
               {openIndex === index && (
-                <p className="mt-3 text-sm text-white/70">{policy.content}</p>
+                <p className="mt-3 text-base" style={{ color: '#2A1A6F', opacity: 0.85 }}>{policy.content}</p>
               )}
             </div>
           ))}
         </div>
+      <style>{`
+        .policy-accordion-card {
+          transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+        }
+        .policy-accordion-card:hover {
+          box-shadow: 0 6px 32px #DB91EF99, 0 2px 8px #B666D2cc;
+          transform: translateY(-2px) scale(1.02);
+        }
+        .policy-accordion-card.active {
+          background: linear-gradient(135deg, #DB91EF 0%, #B666D2 100%) !important;
+          color: #fff !important;
+        }
+        .policy-accordion-card.active h3 {
+          color: #fff !important;
+          WebkitTextStroke: 1px #B666D2;
+          text-shadow: 0 2px 12px #fff8, 0 1px 0 #B666D2;
+        }
+        .policy-accordion-card.active p {
+          color: #fff !important;
+          opacity: 0.95;
+        }
+      `}</style>
       </div>
     </section>
   );

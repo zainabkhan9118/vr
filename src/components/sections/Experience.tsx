@@ -42,33 +42,47 @@ const Experience = () => {
   
   return (
     <section ref={component} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
+    //<section ref={component} className="min-h-screen flex justify-center items-center p-4 md:p-8 text-white text-center relative" style={{ 
       backgroundImage: "radial-gradient(circle at 50% 50%, #1a0b50 0%, #0a0339 50%)",
       backgroundColor: "#0a0339"
     }}>
-      {/* ExperienceGalaxy Animation Background */}
       <div className="absolute inset-0 overflow-hidden">
         <ExperienceGalaxy />
       </div>
       
       <div className="stars" ref={starsRef}></div>
       <div className="max-w-6xl mx-auto py-16 relative z-10">
-        <h1 className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9] mt-8">
+        <h1
+          className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9] mt-8 experience-glow"
+          style={{
+            textShadow: "0 0 24px #DB91EF, 0 2px 24px #4B0082, 0 0px 2px #fff6"
+          }}
+        >
           Explore Immersive<br />
           Experiences
         </h1>
 
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-16">
           {/* Card 1: 360 & VR Worlds */}
-          <div className="relative group w-full md:w-80 min-h-[370px]">
+          <div className="relative group w-full md:w-80 min-h-[370px] ">
             <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
-              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              background: "linear-gradient(135deg, #C5ACCF 0%, #B666D2 100%)",
               backdropFilter: "blur(10px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+              border: "1px solid #DB91EF55",
+              boxShadow: "0 4px 32px 0 #DB91EF33, 0 2px 8px #BDA8F355"
             }}>
-              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
-                <h2 className="text-3xl mb-6 font-medium text-cyan-300">360 & VR<br /> Worlds</h2>
-                <p className="text-lg leading-relaxed">
+              <CardContent className="p-10 text-center flex-1 flex flex-col justify-center" style={{ color: '#56365C' }}>
+                <h2
+                  className="text-3xl mb-6 font-bold"
+                  style={{
+                    color: '#2A1A6F',
+                    WebkitTextStroke: '1.5px #fff',
+                    textShadow: '0 2px 12px #B666D2aa, 0 1px 0 #fff'
+                  }}
+                >
+                  360 & VR<br /> Worlds
+                </h2>
+                <p className="text-lg leading-relaxed" style={{ color: '#2A1A6F' }}>
                   Breathtaking<br />
                   visuals and<br />
                   soundscapes.
@@ -85,14 +99,23 @@ const Experience = () => {
           {/* Card 2: Create Your Own Minds */}
           <div className="relative group w-full md:w-80 min-h-[370px]">
             <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
-              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              background: "linear-gradient(135deg, #C5ACCF 0%, #B666D2 100%)",
               backdropFilter: "blur(10px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+              border: "1px solid #DB91EF55",
+              boxShadow: "0 4px 32px 0 #DB91EF33, 0 2px 8px #BDA8F355"
             }}>
-              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
-                <h2 className="text-3xl mb-6 font-medium text-cyan-300">Create Your<br/>Own <span className='text-blue-500'>Minds</span></h2>
-                <p className="text-lg leading-relaxed">
+              <CardContent className="p-10 text-center flex-1 flex flex-col justify-center" style={{ color: '#56365C' }}>
+                <h2
+                  className="text-3xl mb-6 font-bold"
+                  style={{
+                    color: '#2A1A6F',
+                    WebkitTextStroke: '1.5px #fff',
+                    textShadow: '0 2px 12px #B666D2aa, 0 1px 0 #fff'
+                  }}
+                >
+                  Create Your<br/>Own Minds
+                </h2>
+                <p className="text-lg leading-relaxed" style={{ color: '#2A1A6F' }}>
                   Combine sessions,<br />
                   sounds, visuals.
                 </p>
@@ -108,14 +131,28 @@ const Experience = () => {
           {/* Card 3: Live & Group Sessions */}
           <div className="relative group w-full md:w-80 min-h-[370px]">
             <Card className="page-card h-full w-full rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg flex flex-col" style={{ 
-              background: "linear-gradient(135deg, rgba(54, 43, 123, 0.3) 0%, rgba(26, 19, 77, 0.3) 100%)",
+              background: "linear-gradient(135deg, #C5ACCF 0%, #B666D2 100%)",
               backdropFilter: "blur(10px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)"
+              border: "1px solid #DB91EF55",
+              boxShadow: "0 4px 32px 0 #DB91EF33, 0 2px 8px #BDA8F355"
             }}>
-              <CardContent className="p-10 text-center text-white flex-1 flex flex-col justify-center">
-                <h2 className="text-3xl mb-6 font-medium text-cyan-300">Live & Group<br/>Sessions</h2>
-                <p className="text-lg leading-relaxed">
+              <CardContent className="p-10 text-center flex-1 flex flex-col justify-center" style={{ color: '#56365C' }}>
+                <h2
+                  className="text-3xl mb-6 font-bold"
+                  style={{
+                    color: '#2A1A6F',
+                    WebkitTextStroke: '1.5px #fff',
+                    textShadow: '0 2px 12px #B666D2aa, 0 1px 0 #fff'
+                  }}
+                >
+                  Live & Group<br/>Sessions
+                </h2>
+        <style>{`
+          .experience-glow {
+            transition: text-shadow 0.3s;
+          }
+        `}</style>
+                <p className="text-lg leading-relaxed" style={{ color: '#2A1A6F' }}>
                   Join others in<br />
                   in-time meditations,<br />
                   hypnosis or coaching.

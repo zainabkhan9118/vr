@@ -32,8 +32,8 @@ export default function ExperiencesPreview() {
             }}
           >
             <div className="text-5xl mb-4">{exp.icon}</div>
-            <div className="text-xl font-semibold mb-2 text-[#fcf7e9]">{exp.label}</div>
-            <div className="text-white/80 text-base">{exp.desc}</div>
+            <div className="text-xl font-semibold mb-2 text-[#2A1A6F]">{exp.label}</div>
+            <div className="text-[#56365C] text-base">{exp.desc}</div>
           </div>
         ))}
       </div>

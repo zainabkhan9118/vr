@@ -81,7 +81,7 @@ const HeroSection = () => {
           <span className="hero-title block">power of your mind</span>
         </h1>
 
-        <p
+        {/* <p
           className="hero-subtitle text-xl sm:text-2xl mb-10 font-extrabold leading-relaxed max-w-2xl mx-auto text-center px-6 py-4 rounded-xl shadow-lg"
           style={{
             color: '#2A1A6F',
@@ -96,7 +96,7 @@ const HeroSection = () => {
           <span style={{ color: '#B666D2' }}>
             powered by neuroscience, AI, and virtual reality.
           </span>
-        </p>
+        </p> */}
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <button

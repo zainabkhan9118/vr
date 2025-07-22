@@ -82,10 +82,9 @@ const Policy = () => {
                 style={{ userSelect: 'none' }}
               >
                 <h3
-                  className="text-lg font-bold"
+                  className="text-lg"
                   style={{
-                    color: '#2A1A6F',
-                    WebkitTextStroke: '1px #fff',
+                    color: '#6C3BA7',
                     textShadow: '0 2px 12px #B666D2aa, 0 1px 0 #fff',
                   }}
                 >

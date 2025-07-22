@@ -53,11 +53,15 @@ const Experience = () => {
       <div className="stars" ref={starsRef}></div>
       <div className="max-w-6xl mx-auto py-16 relative z-10">
         <h1
-          className="page-title text-5xl md:text-7xl font-semibold mb-12 leading-tight text-[#fcf7e9] mt-8 experience-glow"
-          style={{
-            textShadow: "0 0 24px #DB91EF, 0 2px 24px #4B0082, 0 0px 2px #fff6"
-          }}
-        >
+            className="page-title text-5xl md:text-7xl font-bold mb-12 leading-tight"
+            style={{
+              color: '#2A1A6F',
+              WebkitTextStroke: '2.5px #fff',
+              textShadow: '0 2px 24px #B666D2cc, 0 1px 0 #fff',
+              letterSpacing: '0.01em',
+              filter: 'drop-shadow(0 0 16px #DB91EF88)'
+            }}
+          >
           Explore Immersive<br />
           Experiences
         </h1>
